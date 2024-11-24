@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1ae03129f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="card mx-auto contenedor">
+
+            <div class="card-header text-center">
+                <h4>Formulario de Pago</h4>
+            </div>
+
+            <div class="card-body">
+                <form>
+                    <!-- Numero de tarjeta -->
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="Tarjeta" class="form-label">Numero de tarjeta</label>
+                            <input type="text" class="form-control" id="tarjeta" placeholder="1234 5678 9123 4567"
+                                required>
+                        </div>
+                        <!-- Nombre del titular -->
+                        <div class="col-md-3">
+                            <label for="Nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="Nombre" placeholder="Nombre del titular"
+                                required>
+                        </div>
+
+                        <!-- Apellido del titular -->
+                        <div class="col-md-3">
+                            <label for="Apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="Apellido" placeholder="Apellido del titular"
+                                required>
+                        </div>
+                    </div>
+
+                    <!-- Fecha de expiracion -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="Fecha" class="form-label">Fecha de Expiracion</label>
+                            <input type="month" class="form-control" id="Fecha" required>
+                        </div>
+
+                        <!-- CVV -->
+                        <div class="col-md-4">
+                            <label for="cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                        </div>
+
+                        <!-- Monto -->
+                        <div class="col-md-4">
+                            <label for="monto" class="form-label">Monto</label>
+                            $<input type="number" class="form-control" id="monto" placeholder="Monto" required>
+                        </div>
+                    </div>
+                    <!-- Ciudad -->
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="Ciudad" class="form-label">Ciudad</label>
+                            <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" required>
+                        </div>
+
+                        <!-- Estado -->
+                        <div class="col-md-4">
+                            <label for="region" class="form-label">Region</label>
+                            <select class="form-control custom-select" id="region" required>
+                                <option class="text-white bg-warning" disabled selected>Selecciona una Region</option>
+                                <option value="Arica">Arica y Parinacota</option>
+                                <option value="Iquique">Tarapacá</option>
+                                <option value="Antofagasta">Antofagasta</option>
+                                <option value="Copiapó">Atacama</option>
+                                <option value="La Serena">Coquimbo</option>
+                                <option value="Valparaíso">Valparaíso</option>
+                                <option value="Santiago">Región Metropolitana</option>
+                                <option value="Rancagua">Libertador General Bernardo O'Higgins</option>
+                                <option value="Talca">Maule</option>
+                                <option value="Concepción">Biobío</option>
+                                <option value="Temuco">La Araucanía</option>
+                                <option value="Valdivia">Los Ríos</option>
+                                <option value="Osorno">Los Lagos</option>
+                                <option value="Coyhaique">Aysén del General Carlos Ibáñez del Campo</option>
+                                <option value="Punta Arenas">Magallanes y de la Antártica Chilena</option>
+                                <option value="Santiago">Ñuble</option>
+                            </select>
+                        </div>
+
+                        <!-- Codigo Postal -->
+                        <div class="col-md-4">
+                            <label for="Codigo" class="form-label">Codigo Postal</label>
+                            <input type="text" class="form-control" id="Codigo" placeholder="Codigo Postal" required>
+                        </div>
+                    </div>
+                    <!-- Tipo de tarjeta -->
+                    <div class="row mb-3">
+                        <div class="col-md-6 pb-3">
+                            <p>Aceptamos:</p>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" checked id="blue" name="options" type="radio">
+                                    <i class="fab fa-cc-mastercard"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" id="red" name="options" type="radio">
+                                    <i class="fab fa-cc-visa"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" id="green" name="options" type="radio">
+                                    <i class="fab fa-cc-diners-club"></i>
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input autocomplete="off" id="yellow" name="options" type="radio">
+                                    <i class="fab fa-cc-amex"></i>
+                                </label>
+                            </div>
+
+
+
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="col-md-6">
+                            <label for="Mensaje">Mensaje</label>
+                            <textarea class="form-control" id="Mensaje" rows="3"></textarea>
+                            <small class="text-muted">Agrega tus notas aqui.</small>
+                        </div>
+
+                    </div>
+
+                    <!-- Recordar tarjeta -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberCard">
+                        <label class="form-check-label" for="rememberCard">Recordar esta tarjeta</label>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+            <!-- Enviar -->
+            <div class="card-footer">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button class="btn btn-secondary me-md-2" type="button">Cancelar</button>
+                    <button class="btn btn-primary" type="button">Enviar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
